@@ -68,6 +68,18 @@ function mostReadBook(log) {
   return maxBook;                           // Return the name of the book with the highest read count
 }
 
+/*
+Area for improvement: To make this function's code more efficient,
+we could use array methods like Math.max.apply instead 
+so that the code is more readable. 
+
+const maxCount = Math.max.apply(null, Object.values(bookCounts));
+for (let book in bookCounts) {
+  if (bookCounts[book] === maxCount) {
+    return book;
+
+*/
+
 // Prints a summary of minutes read per day
 /*
 Function summary
@@ -85,3 +97,7 @@ addReadBook("Saturday", "Dune", 50);
 printDailySummary(readingLog);
 console.log("Total minutes read:", totalReadingMinutes(readingLog));
 console.log("Most read book:", mostReadBook(readingLog));
+
+
+// Adding a test case
+addReadBook("Sunday", "Heartland", 120);
